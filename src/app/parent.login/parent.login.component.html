@@ -1,0 +1,26 @@
+<div id="container" class="container">
+  <!-- <div class="row"> -->
+  <h3 align="center">
+    <span style="
+      border-bottom: 2px solid black;
+      padding: 2px;">Parent Login</span>
+  </h3>
+  <form class="justify-content-center" #loginDetails="ngForm" (ngSubmit)="onLogin(loginDetails.value)">
+    <div class="form-group">
+      <label for="usrnme">Login Name:</label>
+      <input type="email" class="form-control" id="usrnme" name="loginName" ngModel required>
+    </div>
+    <div class="form-group">
+      <label for="pwd">Password:</label>
+      <input type="password" class="form-control" id="pwd" name="password" ngModel required>
+    </div>
+    <button class="btn btn-default" type="submit" [disabled]="!loginDetails.valid">
+      <i class="fa fa-floppy-o"></i>
+      Login
+    </button>
+    <button class="btn btn-default" type="button" (click)="resetClick(loginDetails)">
+      <i class="fa fa-repeat"></i>
+      Reset
+    </button>
+  </form>
+</div>

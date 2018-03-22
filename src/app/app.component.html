@@ -1,0 +1,10 @@
+<div class="topnav" id="myTopnav" style="margin: 10px auto;width: 99%;border: 2px solid #c3c0c0;border-radius: 5px;box-shadow: 1px 1px 15px grey;">
+  <a  class="" routerLink="home">Home</a>
+  <a routerLink="contactUs">Contact Us</a>
+  <a id="log" routerLink={{route}}></a>    
+  <a href="javascript:void(0);" style="font-size:15px;" class="icon" (click)="myFunction()">&#9776;</a>
+</div>
+<!-- Begin page content -->
+<div class="container">
+  <router-outlet></router-outlet>
+</div>
