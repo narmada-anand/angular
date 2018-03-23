@@ -10,6 +10,7 @@ import { AppComponent } from './app.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { LoginComponent } from './login/login.component';
 import { ParentLoginComponent } from './parent.login/parent.login.component';
+import { AdminLoginComponent } from './admin.login/admin.login.component';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { ParentLoginComponent } from './parent.login/parent.login.component';
     AppComponent,
     PagenotfoundComponent,
     LoginComponent,
-    ParentLoginComponent
+    ParentLoginComponent,
+    AdminLoginComponent
   ],
   imports: [
     BrowserModule,
