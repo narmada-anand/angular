@@ -12,15 +12,23 @@ import {Router} from '@angular/router';
 })
 export class AdminLoginComponent implements OnInit {
 
-  constructor() { }
+  constructor(private appService: AppService, private router: Router) { }
 
   ngOnInit() {
   }
-  
+
   onLogin(event) {
     
     var that = this;
-
+this.appService.login(event).subscribe(data => {
+      debugger
+      if (data["Status"] == "success") {
+        sessionStorage.setItem("token",data["session"][0]['loginName']);
+        this.router.navigate(['/dashboard']);
+      }
+      else
+        alert("Login failed....");
+    }); 
 
   }
   resetClick(data?: NgForm) {

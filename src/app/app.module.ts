@@ -4,6 +4,7 @@ import { AppService } from "./app.service";
 import {AppGuard} from './app.guard';
 import {Approutes} from './app.route';
 import { FormsModule } from '@angular/forms';
+import {HttpClientModule} from '@angular/common/http'
 
 
 import { AppComponent } from './app.component';
@@ -24,7 +25,8 @@ import { AdminLoginComponent } from './admin.login/admin.login.component';
   imports: [
     BrowserModule,
     Approutes,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [AppGuard,AppService],
   bootstrap: [AppComponent]
